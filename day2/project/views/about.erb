@@ -1,0 +1,25 @@
+<!-- about.erb -->
+
+
+<h1 style =background-color:#BC64AB>ABOUT</h1>
+
+<
+<!--Para introducir codigo ruby: <% %>. 
+Si ponemos el igual (<%= %> muestra el texto) --> 
+<!-- Para poder usar variables de instancia ponemos @ y en server.rb añadimos la variable-->
+<%= @quetal%> <br>
+
+<h3> Usuarios:</h3>
+
+<ul>
+<%if @mostrar %>
+	<% @usuarios.each do |user| %>
+		<li> <%= user %> <br> </li>
+	<% end%>
+<%end%>
+</ul>
+
+
+
+
+

@@ -1,0 +1,16 @@
+
+<h2>Sinatra Blog</h2>
+
+<ul>
+	<% @@posts.each_with_index do |post, index| %>
+		<li> <a href="/posts/<%= index %>"><h3><%= post.title %></h3></a>   </li>
+	<% end %>
+</ul>
+
+<form action="/new_post" method="get">
+	<button type="submit">Create new post</button>
+</form>
+
+
+
+

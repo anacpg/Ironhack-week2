@@ -1,0 +1,11 @@
+
+
+<h1>Which one was filmed in <%= @year%>?</h1>
+<%@movies.each do |movie| %>
+	<% if movie.year.to_i == @year %>
+	 	<img src= <%= movie.poster %> onClick="alert('CORRECT!')" width=300 height=400> 
+	 	<%= movie.year %>
+	 <%else %>
+	 	<img src= <%= movie.poster %> onClick="alert('INCORRECT!')" width=300 height=400> 
+	 <%end %>
+<%end %>

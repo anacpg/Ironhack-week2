@@ -1,0 +1,22 @@
+
+<h2>Welcome to the TodoList</h2>
+
+<ul>
+	<% @tasks.each do |task|%>
+		<li> 
+			<a href="/complete_task/<%= task.id %>"><%= task.content %></a> 
+			<% if task.complete? %>
+				<span style="color:red">Completed</span> 
+			<% end %>
+		</li>
+	<% end %>	
+</ul>
+
+<form action="/new_task" method="get">
+	<button type="submit">Go to new task</button>
+</form>
+
+
+
+
+
